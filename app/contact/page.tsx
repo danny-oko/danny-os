@@ -24,6 +24,31 @@ export default function ContactPage() {
 
         <QuickConnect />
 
+        <Card>
+          <CardHeader>
+            <CardTitle>What I Can Help With</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="flex flex-wrap gap-2">
+              <span className="px-3 py-1.5 rounded-full border border-[var(--line)] text-xs text-[var(--fg1)]">
+                Full Stack Apps
+              </span>
+              <span className="px-3 py-1.5 rounded-full border border-[var(--line)] text-xs text-[var(--fg1)]">
+                Project Leadership
+              </span>
+              <span className="px-3 py-1.5 rounded-full border border-[var(--line)] text-xs text-[var(--fg1)]">
+                E-Learning Platforms
+              </span>
+              <span className="px-3 py-1.5 rounded-full border border-[var(--line)] text-xs text-[var(--fg1)]">
+                UI and UX
+              </span>
+              <span className="px-3 py-1.5 rounded-full border border-[var(--line)] text-xs text-[var(--fg1)]">
+                E-Commerce Solutions
+              </span>
+            </div>
+          </CardContent>
+        </Card>
+
         <div className="grid gap-6 lg:grid-cols-2">
           <Card>
             <CardHeader>
@@ -126,50 +151,6 @@ export default function ContactPage() {
             </CardContent>
           </Card>
         </div>
-
-        <Card>
-          <CardHeader>
-            <CardTitle>What I Can Help With</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-              <div className="p-3 rounded-lg bg-[var(--bg-2)]">
-                <h4 className="font-medium text-sm mb-1">Full Stack Apps</h4>
-                <p className="text-xs text-[var(--fg1)]">
-                  MERN Stack web apps and Next, TypeScript apps
-                </p>
-              </div>
-              <div className="p-3 rounded-lg bg-[var(--bg-2)]">
-                <h4 className="font-medium text-sm mb-1">Project Leadership</h4>
-                <p className="text-xs text-[var(--fg1)]">
-                  Team coordination, technical planning
-                </p>
-              </div>
-              <div className="p-3 rounded-lg bg-[var(--bg-2)]">
-                <h4 className="font-medium text-sm mb-1">
-                  E-Learning Platforms
-                </h4>
-                <p className="text-xs text-[var(--fg1)]">
-                  Learning management systems
-                </p>
-              </div>
-              <div className="p-3 rounded-lg bg-[var(--bg-2)]">
-                <h4 className="font-medium text-sm mb-1">UI and UX</h4>
-                <p className="text-xs text-[var(--fg1)]">
-                  Modern interfaces, user experience
-                </p>
-              </div>
-              <div className="p-3 rounded-lg bg-[var(--bg-2)]">
-                <h4 className="font-medium text-sm mb-1">
-                  E-Commerce Solutions
-                </h4>
-                <p className="text-xs text-[var(--fg1)]">
-                  Online stores, payment integration
-                </p>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
       </div>
 
       <ContactPageDock />

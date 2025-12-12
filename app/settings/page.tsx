@@ -14,8 +14,8 @@ export default function SettingsPage() {
   const handleReset = () => {
     localStorage.removeItem("dannyos.ui")
     set({
-      theme: "system",
-      wallpaper: "moss",
+      theme: "dark",
+      wallpaper: "graphite",
       grain: true,
       motion: "auto",
       language: "en",

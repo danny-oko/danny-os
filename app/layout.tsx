@@ -30,6 +30,42 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  const stored = localStorage.getItem('dannyos.ui');
+                  let shouldBeDark = true;
+                  
+                  if (stored) {
+                    try {
+                      const parsed = JSON.parse(stored);
+                      const theme = parsed.state?.theme;
+                      if (theme === 'light') {
+                        shouldBeDark = false;
+                      } else {
+                        shouldBeDark = true;
+                      }
+                    } catch (e) {
+                      shouldBeDark = true;
+                    }
+                  }
+                  
+                  if (shouldBeDark) {
+                    document.documentElement.classList.add('dark');
+                  } else {
+                    document.documentElement.classList.remove('dark');
+                  }
+                } catch (e) {
+                  document.documentElement.classList.add('dark');
+                }
+              })();
+            `,
+          }}
+        />
+      </head>
       <body
         className={`${inter.variable} ${ibmPlexMono.variable} font-sans antialiased`}
       >

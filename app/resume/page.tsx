@@ -60,27 +60,23 @@ EXPERIENCE
 Founder & Developer — XP Digital
 July 2025 – Present
 • Founded XP Digital, a freelance web development agency
-• Served as Project Manager, Lead Developer, and Client Lead
-• Successfully delivered 9 projects in 4 months (educational platforms, travel platforms, and agency websites)
-• Implemented admin dashboards, authentication, and payment integrations (QPay, BYL)
-• Integrated video hosting and uploads with Bunny.net TUS
-• Enabled clients to sell products and services more efficiently, significantly boosting sales and helping some launch their businesses from scratch
+• Served as Project Manager, Developer, and Client Lead
+• Successfully delivered 5 projects in 4 months (educational platforms, travel platforms, and agency websites)
 
 ───────────────────────────────────────────────────────────────────────────────
 
 Full-Stack Developer — Honest Media Consulting
 2023 – 2024
-• Developed and maintained company websites using React, Firebase, Next.js, TypeScript, Tailwind
+• Developed and maintained company websites using React, Firebase, HTML, CSS, and JavaScript
 • Created solutions that simplified sharing company work and improved online presence
-• Deployed projects on Vercel with strong value delivery while company was active
 
 ───────────────────────────────────────────────────────────────────────────────
 
 Technician, Sound Engineer & Drummer — First Church
 2021 – Present
-• Volunteered as technician, sound engineer, and drummer
-• Managed stage audio, technical systems, and live mixing
-• Built teamwork, leadership, and technical problem-solving skills
+•Organizing Team Member, “Finger Print” teen church event (200–300 attendees): designed posters, social media content, name tags, and event materials across multiple events over 2 years.
+• Part-time worker as technician, sound engineer, and drummer
+• Managed stage audio, cable management, technical systems, and live mixing for various events 
 
 ═══════════════════════════════════════════════════════════════════════════════
 
@@ -99,11 +95,10 @@ SKILLS
 ───────────────────────────────────────────────────────────────────────────────
 
 Frontend: Next.js, React, TypeScript, Tailwind CSS
-Backend: Node.js, Express, MongoDB
-Tools & Infra: Vercel, Firebase, Bunny.net (TUS), Cloudinary, QPay API, BYL Payments, Git
+Backend: Node.js, Express, MongoDB 
+Tools: Git, Vercel, Firebase, Bunny.net (TUS), Cloudinary, QPay API, BYL Payments
 Project Management: Trello, Notion
-Methodologies: Agile, Sprints, Risk Management, CPM, PERT
-Other: Team Leadership, Audio Engineering
+Other: Communication, Teamwork, Problem-solving, Leadership
 `;
 
       const blob = new Blob([resumeContent], { type: "text/plain" });
@@ -156,9 +151,7 @@ Other: Team Leadership, Audio Engineering
                   <div>
                     <div className="flex justify-between items-start mb-2">
                       <div className="flex items-center gap-2 flex-wrap">
-                        <h4 className="font-medium">
-                          Founder, Project Manager & Developer
-                        </h4>
+                        <h4 className="font-medium">Founder & Developer</h4>
                         <span className="inline-block px-2.5 py-1 text-xs font-semibold bg-gray-100 dark:bg-primary/10 text-gray-800 dark:text-primary rounded-md border border-gray-300 dark:border-primary/20">
                           XP Digital
                         </span>
@@ -172,29 +165,12 @@ Other: Team Leadership, Audio Engineering
                         • Founded XP Digital, a freelance web development agency
                       </li>
                       <li>
-                        • Served as Project Manager, Lead Developer, and Client
-                        Lead
+                        • Served as Project Manager, Developer, and Client Lead
                       </li>
                       <li>
-                        • Successfully delivered 9 projects in 4 months
+                        • Successfully delivered 5 projects in 4 months
                         (educational platforms, travel platforms, and agency
                         websites)
-                      </li>
-                      <li>
-                        • Implemented admin dashboards, authentication, and
-                        payment integrations (QPay, BYL)
-                      </li>
-                      <li>
-                        • Integrated video hosting and uploads with Bunny.net
-                        TUS
-                      </li>
-                      <li>
-                        •{" "}
-                        <strong>
-                          Enabled clients to sell products and services more
-                          efficiently, significantly boosting sales and helping
-                          some launch their businesses from scratch
-                        </strong>
                       </li>
                     </ul>
                   </div>
@@ -214,15 +190,11 @@ Other: Team Leadership, Audio Engineering
                     <ul className="text-sm text-gray-700 dark:text-muted-foreground space-y-1 ml-4">
                       <li>
                         • Developed and maintained company websites using React,
-                        Firebase, Next.js, TypeScript, Tailwind
+                        Firebase, HTML, CSS, and JavaScript
                       </li>
                       <li>
                         • Created solutions that simplified sharing company work
                         and improved online presence
-                      </li>
-                      <li>
-                        • Deployed projects on Vercel with strong value delivery
-                        while company was active
                       </li>
                     </ul>
                   </div>
@@ -243,15 +215,18 @@ Other: Team Leadership, Audio Engineering
                     </div>
                     <ul className="text-sm text-gray-700 dark:text-muted-foreground space-y-1 ml-4">
                       <li>
-                        • Volunteered as technician, sound engineer, and drummer
+                        • Organizing Team Member, "Finger Print" teen church
+                        event (200–300 attendees): designed posters, social
+                        media content, name tags, and event materials across
+                        multiple events over 2 years.
                       </li>
                       <li>
-                        • Managed stage audio, technical systems, and live
-                        mixing
+                        • Part-time worker as technician, sound engineer, and
+                        drummer
                       </li>
                       <li>
-                        • Built teamwork, leadership, and technical
-                        problem-solving skills
+                        • Managed stage audio, cable management, technical
+                        systems, and live mixing for various events
                       </li>
                     </ul>
                   </div>
@@ -264,14 +239,11 @@ Other: Team Leadership, Audio Engineering
                 <div className="space-y-6">
                   <div className="flex justify-between items-start">
                     <div className="flex items-center gap-2 flex-wrap">
-                      <h4 className="font-medium">High School Graduate</h4>
+                      <h4 className="font-medium">Graduated 2025</h4>
                       <span className="inline-block px-2.5 py-1 text-xs font-semibold bg-gray-100 dark:bg-primary/10 text-gray-800 dark:text-primary rounded-md border border-gray-300 dark:border-primary/20">
                         Amjilt Cyber School
                       </span>
                     </div>
-                    <span className="text-sm text-gray-700 dark:text-muted-foreground">
-                      2025
-                    </span>
                   </div>
 
                   <div className="border-t border-border/30 pt-4">
@@ -283,14 +255,11 @@ Other: Team Leadership, Audio Engineering
                         </span>
                       </div>
                       <span className="text-sm text-gray-700 dark:text-muted-foreground">
-                        October 2024 – June 2025
+                        October 2025 – June 2026
                       </span>
                     </div>
                     <div className="text-sm text-gray-700 dark:text-muted-foreground space-y-2">
-                      <p>
-                        • Currently studying at Pinecone Academy as a Software
-                        Engineering Student
-                      </p>
+                      <p>• Currently studying at Pinecone Academy</p>
                     </div>
                   </div>
                 </div>
@@ -320,15 +289,15 @@ Other: Team Leadership, Audio Engineering
                   </div>
 
                   <div className="space-y-3">
-                    <h4 className="font-medium mb-2">Tools & Infra</h4>
+                    <h4 className="font-medium mb-2">Tools</h4>
                     <ul className="text-gray-700 dark:text-muted-foreground space-y-1">
+                      <li>Git</li>
                       <li>Vercel</li>
                       <li>Firebase</li>
                       <li>Bunny.net (TUS)</li>
                       <li>Cloudinary</li>
                       <li>QPay API</li>
                       <li>BYL Payments</li>
-                      <li>Git</li>
                     </ul>
                   </div>
 
@@ -341,22 +310,12 @@ Other: Team Leadership, Audio Engineering
                   </div>
 
                   <div className="space-y-3">
-                    <h4 className="font-medium mb-2">Methodologies</h4>
-                    <ul className="text-gray-700 dark:text-muted-foreground space-y-1">
-                      <li>Agile</li>
-                      <li>Sprints</li>
-                      <li>Risk Management</li>
-                      <li>CPM</li>
-                      <li>PERT</li>
-                    </ul>
-                  </div>
-
-                  <div className="space-y-3">
                     <h4 className="font-medium mb-2">Other</h4>
                     <ul className="text-gray-700 dark:text-muted-foreground space-y-1">
-                      <li>Team Leadership</li>
-                      <li>Audio Engineering</li>
-                      <li>Drummer in Church Band</li>
+                      <li>Communication</li>
+                      <li>Teamwork</li>
+                      <li>Problem-solving</li>
+                      <li>Leadership</li>
                     </ul>
                   </div>
                 </div>

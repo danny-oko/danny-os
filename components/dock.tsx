@@ -1,6 +1,6 @@
 "use client"
 
-import { Home, Folder, User, FileText, MessageCircle, Settings } from "lucide-react"
+import { Home, Folder, FileText, MessageCircle, Settings } from "lucide-react"
 import { useRouter, usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils"
 const dockItems = [
   { icon: Home, label: "Home", path: "/" },
   { icon: Folder, label: "Applications", path: "/applications" },
-  { icon: User, label: "System Info", path: "/system" },
+  // { icon: User, label: "System Info", path: "/system" },
   { icon: FileText, label: "Documents", path: "/resume" },
   { icon: MessageCircle, label: "Messaging", path: "/contact" },
   { icon: Settings, label: "Settings", path: "/settings" },

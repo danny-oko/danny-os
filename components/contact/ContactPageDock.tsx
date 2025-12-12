@@ -1,88 +1,106 @@
-"use client"
+"use client";
 
-import { Home, Mail, Github, Instagram, Facebook, Linkedin, CheckCircle2 } from "lucide-react"
-import { useRouter } from "next/navigation"
-import { Button } from "@/components/ui/button"
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
-import { toast } from "sonner"
-import { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { Button } from "@/components/ui/button";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import { AnimatePresence, motion } from "framer-motion";
+import {
+  CheckCircle2,
+  Facebook,
+  Github,
+  Home,
+  Instagram,
+  Linkedin,
+  Mail,
+} from "lucide-react";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+import { toast } from "sonner";
 
 export function ContactPageDock() {
-  const router = useRouter()
-  const [emailCopied, setEmailCopied] = useState(false)
-  const [isAnimating, setIsAnimating] = useState(false)
+  const router = useRouter();
+  const [emailCopied, setEmailCopied] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(false);
 
   const copyToClipboard = async (text: string, label: string) => {
     try {
-      await navigator.clipboard.writeText(text)
+      await navigator.clipboard.writeText(text);
       toast.success(`Copied ${label} to clipboard`, {
-        description: text
-      })
+        description: text,
+      });
     } catch (err) {
-      toast.error(`Failed to copy ${label}`)
+      toast.error(`Failed to copy ${label}`);
     }
-  }
+  };
 
   const openLink = (url: string, label: string) => {
     try {
-      window.open(url, '_blank', 'noopener,noreferrer')
+      window.open(url, "_blank", "noopener,noreferrer");
     } catch (err) {
-      toast.error(`Failed to open ${label}`)
+      toast.error(`Failed to open ${label}`);
     }
-  }
+  };
 
   const copyEmail = async () => {
-    setIsAnimating(true)
-    await copyToClipboard('danny.otgontsetseg@gmali.com', 'email address')
-    setEmailCopied(true)
-    
+    setIsAnimating(true);
+    await copyToClipboard("danny.otgontsetseg@gmai.com", "email address");
+    setEmailCopied(true);
+
     // Reset after 2 seconds
     setTimeout(() => {
-      setEmailCopied(false)
-      setIsAnimating(false)
-    }, 2000)
-  }
+      setEmailCopied(false);
+      setIsAnimating(false);
+    }, 2000);
+  };
 
   const dockItems = [
     {
       icon: Home,
       label: "Home",
       onClick: () => router.push("/"),
-      ariaLabel: "Go to home page"
+      ariaLabel: "Go to home page",
     },
     {
       icon: Facebook,
       label: "Facebook",
-      onClick: () => openLink('https://www.facebook.com/dnii.dnii.0412', 'Facebook'),
-      ariaLabel: "Open Facebook profile"
+      onClick: () =>
+        openLink("https://www.facebook.com/dnii.dnii.0412", "Facebook"),
+      ariaLabel: "Open Facebook profile",
     },
     {
       icon: Instagram,
       label: "Instagram",
-      onClick: () => openLink('https://www.instagram.com/dnii_d/', 'Instagram'),
-      ariaLabel: "Open Instagram profile"
+      onClick: () => openLink("https://www.instagram.com/dnii_d/", "Instagram"),
+      ariaLabel: "Open Instagram profile",
     },
     {
       icon: Github,
       label: "GitHub",
-      onClick: () => openLink('https://github.com/dnii0412', 'GitHub'),
-      ariaLabel: "Open GitHub profile"
+      onClick: () => openLink("https://github.com/danny-oko", "GitHub"),
+      ariaLabel: "Open GitHub profile",
     },
     {
       icon: Linkedin,
       label: "LinkedIn",
-      onClick: () => openLink('https://www.linkedin.com/in/danny-otgontsetseg-baaa67260/', 'LinkedIn'),
-      ariaLabel: "Open LinkedIn profile"
+      onClick: () =>
+        openLink(
+          "https://www.linkedin.com/in/danny-otgontsetseg-baaa67260/",
+          "LinkedIn"
+        ),
+      ariaLabel: "Open LinkedIn profile",
     },
-  ]
+  ];
 
   return (
     <div className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50">
       <div className="flex items-center gap-2 px-4 py-3 bg-card/80 backdrop-blur-md border border-border rounded-xl shadow-lg">
         <TooltipProvider>
           {dockItems.map((item) => {
-            const Icon = item.icon
+            const Icon = item.icon;
             return (
               <Tooltip key={item.label}>
                 <TooltipTrigger asChild>
@@ -92,7 +110,10 @@ export function ContactPageDock() {
                     onClick={item.onClick}
                     className="w-10 h-10 p-0 transition-all duration-200 hover:scale-110"
                   >
-                    <Icon className="w-5 h-5 text-gray-800 dark:text-white" strokeWidth={2} />
+                    <Icon
+                      className="w-5 h-5 text-gray-800 dark:text-white"
+                      strokeWidth={2}
+                    />
                     <span className="sr-only">{item.ariaLabel}</span>
                   </Button>
                 </TooltipTrigger>
@@ -100,9 +121,9 @@ export function ContactPageDock() {
                   <p>{item.label}</p>
                 </TooltipContent>
               </Tooltip>
-            )
+            );
           })}
-          
+
           {/* Email Copy Button with Animation - Centered */}
           <Tooltip>
             <TooltipTrigger asChild>
@@ -115,7 +136,7 @@ export function ContactPageDock() {
                   variant="ghost"
                   size="sm"
                   onClick={copyEmail}
-                  className="w-10 h-10 p-0 relative transition-all duration-200 hover:scale-110"
+                  className="w-10 h-10 p-0 relative flex items-center justify-center transition-all duration-200 hover:scale-110"
                 >
                   <AnimatePresence mode="wait">
                     {emailCopied ? (
@@ -137,7 +158,10 @@ export function ContactPageDock() {
                         transition={{ duration: 0.2 }}
                         className="absolute inset-0 flex items-center justify-center"
                       >
-                        <Mail className="w-5 h-5 text-gray-800 dark:text-white" strokeWidth={2} />
+                        <Mail
+                          className="w-5 h-5 text-gray-800 dark:text-white"
+                          strokeWidth={2}
+                        />
                       </motion.div>
                     )}
                   </AnimatePresence>
@@ -152,5 +176,5 @@ export function ContactPageDock() {
         </TooltipProvider>
       </div>
     </div>
-  )
+  );
 }

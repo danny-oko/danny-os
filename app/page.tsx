@@ -68,7 +68,7 @@ export default function HomePage() {
               Welcome to DannyOS
             </h1>
             <p className="text-xl text-white/95 text-pretty font-medium drop-shadow-lg">
-              A minimal, elegant operating system for my work
+             
             </p>
           </div>
 
