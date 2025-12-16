@@ -178,5 +178,3 @@ export function CommandPalette() {
     </CommandDialog>
   );
 }
-
-
