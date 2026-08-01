@@ -220,6 +220,75 @@ export const PROJECTS: Project[] = [
     featured: true,
   },
   {
+    id: "frame-lab",
+    name: "Frame Lab",
+    description: "Equipment Rental Platform",
+    overview:
+      "A full-stack camera & lighting rental platform for a photo/video studio in Ulaanbaatar — live and taking paid orders within two days of launch. Clients browse a catalog, filter, cart, and check out; admins approve orders, manage inventory, and auto-generate rental contracts.",
+    features: [
+      "Pricing engine: 12h vs multi-day rates, multi-day discount, VAT, delivery fee, and worker discount computed directly into the contract order",
+      "Realtime admin approvals via Supabase",
+      "Order lifecycle: submitted → approved → ongoing → completed",
+      "Live per-item availability",
+      "Auto-generated rental contract PDFs",
+    ],
+    techStack: [
+      "Next.js",
+      "TypeScript",
+      "Supabase",
+      "Clerk",
+      "Cloudinary",
+      "Tailwind",
+      "shadcn/ui",
+    ],
+    challenges: [],
+    teamRoles: [
+      {
+        name: "Danny",
+        role: "Solo — built the full-stack platform end-to-end, from catalog and checkout to the admin approval workflow and pricing/contract engine.",
+      },
+    ],
+    meta: {
+      duration: "1 Week",
+      category: "Full-Stack / Product",
+      team: "Solo",
+    },
+    demoUrl: "https://frame-lab-rental.vercel.app",
+    status: "Live Product",
+    featured: true,
+  },
+  {
+    id: "finger-print",
+    name: "Finger Print",
+    description: "Youth Conference Website",
+    overview:
+      "A bilingual (EN/MN) event and fundraising site for the Finger Print youth conference, held since 2016. Drives registration, volunteer signup, and financial support, with a live countdown to the next event and an interactive timeline of past conferences.",
+    features: [
+      "Three participation paths: attend / serve / support",
+      "Bilingual i18n (English / Mongolian)",
+      "Cloudinary-optimized photo gallery and hero video",
+      "Responsive design",
+      "SEO and social meta tags",
+    ],
+    techStack: ["Next.js", "TypeScript", "Tailwind", "Cloudinary", "i18n"],
+    challenges: [],
+    teamRoles: [
+      {
+        name: "Danny",
+        role: "Solo — built the bilingual event site end-to-end, including the registration flows and media-optimized gallery.",
+      },
+    ],
+    meta: {
+      duration: "1 Week",
+      category: "Web / Event",
+      team: "Solo",
+    },
+    demoUrl: "https://finger-print.org",
+    githubUrl: "https://github.com/danny-oko/finger-print",
+    status: "Client Project",
+    featured: true,
+  },
+  {
     id: "xp-digital",
     name: "XP Digital",
     description: "Web Development Agency",
