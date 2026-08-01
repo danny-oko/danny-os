@@ -1,7 +1,7 @@
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { ExternalLink, Users, Clock, Tag, CheckCircle, AlertCircle } from "lucide-react"
+import { ExternalLink, Github, Users, Clock, Tag, CheckCircle, AlertCircle } from "lucide-react"
 import type { Project } from "@/lib/projects"
 
 interface ProjectDetailsProps {
@@ -13,21 +13,39 @@ export function ProjectDetails({ project }: ProjectDetailsProps) {
     <div className="space-y-8">
       {/* Header */}
       <div className="space-y-4">
-        <div className="flex items-start justify-between">
+        <div className="flex items-start justify-between gap-4 flex-wrap">
           <div>
-            <h1 className="text-3xl font-bold">{project.name}</h1>
+            <div className="flex items-center gap-2 flex-wrap">
+              <h1 className="text-3xl font-bold">{project.name}</h1>
+              {project.status && <Badge variant="outline">{project.status}</Badge>}
+            </div>
             <p className="text-xl text-muted-foreground mt-2">{project.description}</p>
           </div>
-          <Button asChild className="bg-green-600 hover:bg-green-700">
-            <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
-              <ExternalLink className="w-4 h-4 mr-2" />
-              View Demo
-            </a>
-          </Button>
+          {(project.demoUrl || project.githubUrl) && (
+            <Button asChild className="bg-green-600 hover:bg-green-700">
+              <a
+                href={project.demoUrl ?? project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {project.demoUrl ? (
+                  <>
+                    <ExternalLink className="w-4 h-4 mr-2" />
+                    View Demo
+                  </>
+                ) : (
+                  <>
+                    <Github className="w-4 h-4 mr-2" />
+                    View on GitHub
+                  </>
+                )}
+              </a>
+            </Button>
+          )}
         </div>
 
         {/* Meta Info */}
-        <div className="flex items-center gap-6 text-sm text-muted-foreground">
+        <div className="flex items-center gap-6 text-sm text-muted-foreground flex-wrap">
           <div className="flex items-center gap-2">
             <Clock className="w-4 h-4" />
             <span>{project.meta.duration}</span>
@@ -41,6 +59,17 @@ export function ProjectDetails({ project }: ProjectDetailsProps) {
             <span>{project.meta.category}</span>
           </div>
         </div>
+
+        {/* Metrics */}
+        {project.metrics && project.metrics.length > 0 && (
+          <div className="flex flex-wrap gap-2">
+            {project.metrics.map((metric) => (
+              <Badge key={metric} variant="secondary" className="text-xs">
+                {metric}
+              </Badge>
+            ))}
+          </div>
+        )}
       </div>
 
       {/* Project Overview */}

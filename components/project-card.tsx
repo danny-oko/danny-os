@@ -2,7 +2,7 @@
 
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { ExternalLink, Info } from "lucide-react"
+import { ExternalLink, Info, Github } from "lucide-react"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
 import type { Project } from "@/lib/projects"
@@ -27,9 +27,16 @@ export function ProjectCard({ project }: ProjectCardProps) {
       <div className="flex-1 space-y-4">
         {/* 1) Header */}
         <header className="space-y-1">
-          <h3 className="text-lg font-semibold text-[var(--fg0)] text-balance group-hover:text-green-600 transition-colors">
-            {project.name}
-          </h3>
+          <div className="flex items-center justify-between gap-2">
+            <h3 className="text-lg font-semibold text-[var(--fg0)] text-balance group-hover:text-green-600 transition-colors">
+              {project.name}
+            </h3>
+            {project.status && (
+              <Badge variant="outline" className="text-[10px] whitespace-nowrap shrink-0">
+                {project.status}
+              </Badge>
+            )}
+          </div>
           {project.description && (
             <p className="text-sm text-[var(--fg1)] text-pretty font-medium">{project.description}</p>
           )}
@@ -88,16 +95,32 @@ export function ProjectCard({ project }: ProjectCardProps) {
               Details
             </Link>
           </Button>
-          <Button
-            size="sm"
-            asChild
-            className="flex-1 h-10 btn-accent inline-flex items-center justify-center focus:ring-2 focus:ring-[var(--accent)]"
-          >
-            <a href={project.demoUrl} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
-              <ExternalLink className="w-4 h-4 mr-2" />
-              Demo
-            </a>
-          </Button>
+          {(project.demoUrl || project.githubUrl) && (
+            <Button
+              size="sm"
+              asChild
+              className="flex-1 h-10 btn-accent inline-flex items-center justify-center focus:ring-2 focus:ring-[var(--accent)]"
+            >
+              <a
+                href={project.demoUrl ?? project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
+              >
+                {project.demoUrl ? (
+                  <>
+                    <ExternalLink className="w-4 h-4 mr-2" />
+                    Demo
+                  </>
+                ) : (
+                  <>
+                    <Github className="w-4 h-4 mr-2" />
+                    GitHub
+                  </>
+                )}
+              </a>
+            </Button>
+          )}
         </div>
       </div>
     </article>

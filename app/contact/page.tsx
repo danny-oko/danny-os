@@ -1,5 +1,4 @@
 "use client";
-import { ContactPageDock } from "@/components/contact/ContactPageDock";
 import { QuickConnect } from "@/components/contact/QuickConnect";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -9,7 +8,7 @@ import { Coffee, MapPin, Terminal } from "lucide-react";
 export default function ContactPage() {
   return (
     <Window title="Connect & Messaging">
-      <div className="space-y-6 pb-24">
+      <div className="space-y-6">
         <header className="space-y-2">
           <h1 className="text-2xl font-semibold text-[var(--fg0)]">
             Let's Connect
@@ -152,8 +151,6 @@ export default function ContactPage() {
           </Card>
         </div>
       </div>
-
-      <ContactPageDock />
     </Window>
   );
 }
